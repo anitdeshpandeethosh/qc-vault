@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: qr-vault
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: BASE_URL
+        value: https://qr-vault.onrender.com   # ← change this to YOUR render URL after deploy
+    disk:
+      name: qr-vault-data
+      mountPath: /app/uploads
+      sizeGB: 1
