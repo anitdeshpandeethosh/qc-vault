@@ -7,8 +7,10 @@ services:
     startCommand: npm start
     envVars:
       - key: BASE_URL
-        value: https://qr-vault.onrender.com   # ← change this to YOUR render URL after deploy
-    disk:
-      name: qr-vault-data
-      mountPath: /app/uploads
-      sizeGB: 1
+        value: https://qr-vault.onrender.com   # ← change to YOUR render URL
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false

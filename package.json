@@ -1,13 +1,14 @@
 {
   "name": "qr-vault",
-  "version": "1.0.0",
-  "description": "Permanent QR code generator — host your own files and URLs forever",
+  "version": "2.0.0",
+  "description": "Permanent QR code generator with Cloudinary storage — no expiry, ever",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
   },
   "dependencies": {
+    "cloudinary": "^2.5.1",
     "express": "^4.18.2",
     "multer": "^1.4.5-lts.1",
     "qrcode": "^1.5.3",
